@@ -1,0 +1,40 @@
+
+.product {
+    width: 300px;
+    height: 500px;
+    border: 2px solid black;
+    position: relative;
+}  
+.product-header {
+    margin: 0.5rem;
+}
+.product-header img {
+  height: 286px;
+  width: 286px;
+  border-radius: 8px;
+}
+.product-header h6 {
+    margin: 0;
+}
+.product-header h5 {
+    margin: 0.5em 0;
+}
+.product-header h4 {
+    margin: 0.7em 0;
+    font-size: 1.1em;
+}
+.product-footer {
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    background-color: bisque;
+    width: 100%;
+    border-radius: 0%;
+    border: none;
+}
+.product-footer:hover{
+    background-color: orange;
+}
+.product-footer h4 {
+    margin: 0.5rem 0;
+}
