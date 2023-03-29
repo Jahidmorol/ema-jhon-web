@@ -2,7 +2,8 @@
 .product {
     width: 300px;
     height: 500px;
-    border: 2px solid black;
+    border: 1px solid black;
+    border-radius: 8px;
     position: relative;
 }  
 .product-header {
@@ -27,9 +28,9 @@
     text-align: center;
     position: absolute;
     bottom: 0;
-    background-color: bisque;
+    background-color:#FFE0B3;
     width: 100%;
-    border-radius: 0%;
+    border-radius: 0 0 8px 8px;
     border: none;
 }
 .product-footer:hover{
