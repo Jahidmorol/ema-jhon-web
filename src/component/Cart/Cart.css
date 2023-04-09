@@ -1,7 +1,18 @@
-
 .cart-container {
-    background-color: #FFE0B3;
-    padding: 2rem;
-    position: sticky;
-    top: 0;
+  background-color: #ffe0b3;
+  padding: 2rem;
+  position: sticky;
+  top: 0;
+}
+.btn-clear-cart {
+  width: 90%;
+  height: 56px;
+  font-size: 21px;
+  margin: 10px auto;
+  background: #ff3030;
+  border-radius: 4px;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }

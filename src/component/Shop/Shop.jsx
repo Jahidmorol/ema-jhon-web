@@ -1,7 +1,11 @@
 import React from "react";
 import { useEffect } from "react";
 import { useState } from "react";
-import { addToDb, getShoppingCart } from "../../utilities/fakedb";
+import {
+  addToDb,
+  deleteShoppingCart,
+  getShoppingCart,
+} from "../../utilities/fakedb";
 import Cart from "../Cart/Cart";
 import Product from "../Product/Product";
 import "./Shop.css";
@@ -16,29 +20,33 @@ const Shop = () => {
       .then((data) => setProducts(data));
   }, []);
 
-  useEffect(()=>{
-    const storedCart = getShoppingCart()
+  useEffect(() => {
+    const storedCart = getShoppingCart();
     let savedCart = [];
-    for(const id in storedCart){
-      // step 1 : get id 
-      const addedProduct = products.find(product => product.id === id);
-      // step 2 : get the priduct by using id 
-      if(addedProduct){
-        // step 3 : get quantiry of the product 
-      const quantity = storedCart[id]
-      addedProduct.quantity = quantity;
-      // add the added the product to the saved cart 
-      savedCart.push(addedProduct);
+    for (const id in storedCart) {
+      // step 1 : get id
+      const addedProduct = products.find((product) => product.id === id);
+      // step 2 : get the priduct by using id
+      if (addedProduct) {
+        // step 3 : get quantiry of the product
+        const quantity = storedCart[id];
+        addedProduct.quantity = quantity;
+        // add the added the product to the saved cart
+        savedCart.push(addedProduct);
       }
-      // step 5 set the cart 
+      // step 5 set the cart
       setCart(savedCart);
     }
-  } ,[products])
+  }, [products]);
 
   const handleAddToCart = (product) => {
     const newCart = [...cart, product];
     setCart(newCart);
     addToDb(product.id);
+  };
+  const handleClearCart = () => {
+    setCart([]);
+    deleteShoppingCart();
   };
   return (
     <div className="container">
@@ -52,7 +60,7 @@ const Shop = () => {
         ))}
       </div>
       <div className="summary-container">
-        <Cart cart={cart}></Cart>
+        <Cart cart={cart} handleClearCart={handleClearCart}></Cart>
       </div>
     </div>
   );

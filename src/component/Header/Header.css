@@ -8,11 +8,20 @@
     justify-content: space-between;
     padding: 0 4rem;
   }
-  .header, ul {
+  /* .header div {
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 1rem;
-    color: #ffffff;
+    color: #FFFFFF;
     list-style: none;
-  };
+  }; */
+
+  .header div a {
+    text-decoration: none;
+    color: #FFFFFF;
+    margin-left: 30px;
+  }
+  .header a:hover{
+    color: orange;
+}
