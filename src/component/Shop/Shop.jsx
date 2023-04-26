@@ -1,6 +1,7 @@
 import React from "react";
 import { useEffect } from "react";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import {
   addToDb,
   deleteShoppingCart,
@@ -59,8 +60,13 @@ const Shop = () => {
           ></Product>
         ))}
       </div>
-      <div className="summary-container">
-        <Cart cart={cart} handleClearCart={handleClearCart}></Cart>
+      <div>
+        <div className="summary-container">
+          <Cart cart={cart} handleClearCart={handleClearCart}></Cart>
+          <Link className="proceed-link" to="/orders">
+            <button className="btn-proceed">Review Order</button>
+          </Link>
+        </div>
       </div>
     </div>
   );

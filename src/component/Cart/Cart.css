@@ -1,15 +1,28 @@
-.cart-container {
-  background-color: #ffe0b3;
-  padding: 2rem;
-  position: sticky;
-  top: 0;
-}
+/* .cart-container {
+  
+} */
 .btn-clear-cart {
-  width: 90%;
+  width: 95%;
   height: 56px;
   font-size: 21px;
   margin: 10px auto;
   background: #ff3030;
+  border-radius: 4px;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.proceed-link{
+  text-decoration: none;
+}
+.btn-proceed {
+  background: #FF9900;
+  width: 95%;
+  height: 56px;
+  font-size: 21px;
+  margin: 10px auto;
   border-radius: 4px;
   color: white;
   display: flex;

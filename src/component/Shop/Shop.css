@@ -1,11 +1,17 @@
-
 .container {
-    display: grid;
-    grid-template-columns: 4fr 1fr;
+  display: grid;
+  grid-template-columns: 3fr 1fr;
 }
 .product-container {
-    margin: 3rem;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 45px;
+  margin: 3rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 45px;
+}
+
+.summary-container {
+  background-color: #ffe0b3;
+  padding: 2rem;
+  position: sticky;
+  top: 0;
 }
