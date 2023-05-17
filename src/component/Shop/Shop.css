@@ -15,3 +15,16 @@
   position: sticky;
   top: 0;
 }
+
+.pagination {
+  /* width: 40%;
+  margin: 0 auto; */
+  text-align: center;
+}
+.pagination button{
+  margin-left: 5px;
+  margin-bottom: 2rem;
+}
+.selected {
+  background: #ff670277;
+}

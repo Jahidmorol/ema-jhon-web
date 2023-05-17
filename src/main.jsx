@@ -1,7 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import App from "./App";
 import CheckOut from "./component/CheckOut/CheckOut";
 import Home from "./component/Home/Home";
 import Inventory from "./component/Inventory/Inventory";
@@ -22,6 +21,7 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Shop></Shop>,
+        loader: () => fetch('http://localhost:5000/totalProducts')
       },
       {
         path: "/inventory",
